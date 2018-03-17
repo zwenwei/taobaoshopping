@@ -1,0 +1,24 @@
+{
+  "name": "taobaoshopping",
+  "version": "1.0.0",
+  "description": "a project imitate taobao",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zwenwei/taobaoshopping.git"
+  },
+  "keywords": [
+    "express",
+    "shopping",
+    "nodejs"
+  ],
+  "author": "zwenwei",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zwenwei/taobaoshopping/issues"
+  },
+  "homepage": "https://github.com/zwenwei/taobaoshopping#readme"
+}
