@@ -4,7 +4,7 @@
   "description": "a project imitate taobao",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,12 @@
   },
   "homepage": "https://github.com/zwenwei/taobaoshopping#readme",
   "devDependencies": {
+    "body-parser": "^1.18.2",
+    "crypto": "^1.0.1",
     "ejs": "^2.5.7",
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "mysql": "^2.15.0",
+    "q": "^1.5.1",
+    "serve-favicon": "^2.4.5"
   }
 }

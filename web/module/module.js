@@ -1,1 +1,1 @@
-angular.module('app',['ng','ionic']);
+angular.module('app',['ng','ionic','oc.lazyLoad']);

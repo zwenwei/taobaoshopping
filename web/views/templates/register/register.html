@@ -1,40 +1,43 @@
 <ion-header-bar class="bar-assertive">
-	<span class="title">注册</span>
+	<span class="title">注册帐号</span>
 </ion-header-bar>
-<ion-content>
+<ion-content class="register">
 	<ion-list>
 		<ion-item class="item-input item-stacked-label">
 			<span class="input-label">
 				<i class="icon ion-android-phone-portrait assertive"></i>
 			</span>
-			<input type="text" name="" placeholder="手机号码">
+			<input type="text" name="" placeholder="手机号码" ng-model="data.phone">
 		</ion-item>
 		<ion-item class="item-input item-stacked-label">
 			<span class="input-label">
 				<i class="icon ion-ios-email assertive"></i>
 			</span>
-			<input type="text" name="" placeholder="邮箱">
+			<input type="text" name="" placeholder="邮箱" ng-model="data.email">
 		</ion-item>
 		<ion-item class="item-input item-stacked-label">
 			<span class="input-label">
 				<i class="icon ion-person assertive"></i>
 			</span>
-			<input type="text" name="" placeholder="匿名">
+			<input type="text" name="" placeholder="昵称" ng-model="data.nickname">
 		</ion-item>
 		<ion-item class="item-input item-stacked-label">
 			<span class="input-label">
 				<i class="icon ion-ios-locked assertive"></i>
 			</span>
-			<input type="password" name="" placeholder="密码">
+			<input type="password" name="" placeholder="密码" ng-model="data.pwd">
 		</ion-item>
 		<ion-item class="item-input item-stacked-label">
 			<span class="input-label">
 				<i class="icon ion-ios-locked assertive"></i>
 			</span>
-			<input type="password" name="" placeholder="确认密码">
+			<input type="password" name="" placeholder="确认密码" ng-model="data.cpwd">
 		</ion-item>
 		<div class="padding-horizontal padding-top">
-			<button class="button button-assertive button-block">注册</button>
+			<button ng-click="register();" class="button button-assertive button-block">注册</button>
 		</div>
 	</ion-list>
+	<div class="row">
+		<a class="col text-center" ui-sref="login">已有帐号?登录</a>	
+	</div>
 </ion-content>
