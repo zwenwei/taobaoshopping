@@ -1,28 +1,25 @@
-.home{
+.details{
 	background-color: #efefef;
 }
 
-.home .pro-bg{
-	background-color: #fff;
+.details .name-price{
+	overflow: hidden;
 }
-.home .pro-info{
-	overflow:hidden;
-}
-.home .pro-info>.fl{
+.details .name-price>.fl{
 	float: left;
-
 }
-.home .pro-info>.fr{
-	float: right; 
+.details .name-price>.fr{
+	float: right;
+	color: red;
 }
 
-.home .pro-info>p{
+.details .name-price>p{
 	text-overflow:ellipsis;
 	overflow: hidden;
 	white-space: nowrap;
 	width: 50%;
 }
-.home .pro-desc{
+.details .name-desc{
 	text-overflow:ellipsis;
 	overflow: hidden;
 	white-space: nowrap;

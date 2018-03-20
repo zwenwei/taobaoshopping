@@ -1,0 +1,26 @@
+<ion-header-bar class="bar-assertive">
+	<button class="button button-clear icon ion-ios-arrow-left"></button>
+	<span class="title">商品详情</span>
+</ion-header-bar>
+<ion-content class="details padding">
+	<ion-list class="card">
+		<ion-item class="item-body">
+			<img class="full-image" ng-src="{{data[0].imgUrl}}" />
+			<div class="name-price text-center">
+				<p class="fl padding-horizontal">{{data[0].name}}</p>
+				<p class="fr padding-horizontal"><span>￥</span><span>{{data[0].price}}</span></p>
+			</div>
+			<p>
+				<span class="subdued">月销售{{data[0].monthCount}}</span>
+				<span class="subdued">库存{{data[0].surplusCount}}</span>
+			</p>
+			<p>{{data[0].desc}}</p>
+			<p>
+				<span class="subdued">{{data[0].like}}喜欢</span>
+				<span class="subdued">{{data[0].notlike}}不喜欢</span>
+			</p>
+			<div class="button button-outline button-small button-assertive">查看评论</div>
+			<div class="button button-block button-assertive">加入购物车</div>
+		</ion-item>
+	</ion-list>
+</ion-content>
