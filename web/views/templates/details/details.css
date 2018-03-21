@@ -24,3 +24,21 @@
 	overflow: hidden;
 	white-space: nowrap;
 }
+.details .count{
+	float: right;
+}
+.details .count-l{
+	float: left;
+	font-size: 12px;
+}
+.details .count-r{
+	float: right;
+	padding: 0;
+	min-width: 30px;
+	max-width:50px;
+	border: 1px solid red;
+	text-align: center;
+	height: 20px;
+	font-size: 14px;
+	cursor: pointer;
+}

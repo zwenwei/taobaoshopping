@@ -55,5 +55,16 @@ angular.module('app')
 					}]		
 				}
 			})
+			.state('comment',{
+				url:'/comment/:id',
+				templateUrl:'/templates/comment/comment.html',
+				cache:false,
+				controller:'commentController',
+				resolve:{
+					des:['$ocLazyLoad',function($ocLazyLoad){
+						return $ocLazyLoad.load('comment');
+					}]		
+				}
+			})
 			$locationProvider.html5Mode(true);
 	}]);

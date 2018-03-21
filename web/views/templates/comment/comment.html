@@ -1,0 +1,13 @@
+<ion-header-bar class="bar-assertive">
+	<button class="button button-clear icon ion-ios-arrow-left" ng-click="goBack();"></button>
+	<span class="title">商品评论</span>
+</ion-header-bar>
+<ion-content>
+	<ion-list>
+		<ion-item ng-repeat="item in data">
+			<p>用户:{{item.nickname}}</p>
+			<p>内容:{{item.content}}</p>
+			<p>评论时间:{{item.commentTime}}</p>
+		</ion-item>
+	</ion-list>
+</ion-content>

@@ -11,4 +11,6 @@ module.exports = function(app){
 
 	app.get('/details/:id',RoutesController.detailsController);
 
+	app.get('/comment/:id',RoutesController.commentController);
+
 };

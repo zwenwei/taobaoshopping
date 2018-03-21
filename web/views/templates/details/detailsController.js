@@ -1,6 +1,7 @@
 angular.module('app')
 	.controller('detailsController',['$scope','$stateParams','API','utils',function($scope,$stateParams,API,utils){
 
+		$scope.count =1 ;
 		utils.tips.showLoadTips();
 		API.fetchGet('/details/'+$stateParams.id,$stateParams)
 			.then(function(data){
@@ -11,4 +12,7 @@ angular.module('app')
 				console.log(err);
 				utils.tips.hideLoadTips();
 			})
+		$scope.addShopCart =function(){
+
+		};
 	}])

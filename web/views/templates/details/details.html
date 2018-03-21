@@ -1,5 +1,5 @@
 <ion-header-bar class="bar-assertive">
-	<button class="button button-clear icon ion-ios-arrow-left"></button>
+	<button class="button button-clear icon ion-ios-arrow-left" ng-click="goBack();"></button>
 	<span class="title">商品详情</span>
 </ion-header-bar>
 <ion-content class="details padding">
@@ -10,17 +10,25 @@
 				<p class="fl padding-horizontal">{{data[0].name}}</p>
 				<p class="fr padding-horizontal"><span>￥</span><span>{{data[0].price}}</span></p>
 			</div>
-			<p>
-				<span class="subdued">月销售{{data[0].monthCount}}</span>
-				<span class="subdued">库存{{data[0].surplusCount}}</span>
-			</p>
+			<div class="row">
+				<p class="col">
+					<span class="subdued">月销售{{data[0].monthCount}}</span>
+					<span class="subdued">库存{{data[0].surplusCount}}</span>
+				</p>
+				<p class="col">
+					<span class="count">
+					<span class="count-l padding-right">数量</span>
+						<input class="count-r" type="text" name="" ng-model="count" />
+					</span>
+				</p>
+			</div>
 			<p>{{data[0].desc}}</p>
 			<p>
 				<span class="subdued">{{data[0].like}}喜欢</span>
 				<span class="subdued">{{data[0].notlike}}不喜欢</span>
 			</p>
-			<div class="button button-outline button-small button-assertive">查看评论</div>
-			<div class="button button-block button-assertive">加入购物车</div>
+			<div class="button button-outline button-small button-assertive" ng-click="goPage('comment',{id:data[0].did});">查看评论</div>
+			<div class="button button-block button-assertive" ng-click="addShopCart();">加入购物车</div>
 		</ion-item>
 	</ion-list>
 </ion-content>

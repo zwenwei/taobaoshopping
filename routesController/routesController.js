@@ -6,6 +6,8 @@ const common = require(__basename+'/common/common.js');
 
 const utils = require(__basename+'/lib/utils/utils.js');
 
+const moment = require('moment');
+
 class RoutesController{
 	constructor(){}
 
@@ -84,6 +86,20 @@ class RoutesController{
 		let detailssql = SQL.findOneForDetails(req.query);
 		service.query(detailssql)
 		.then(function(result){
+			res.send(result);
+		})
+		.catch(function(err){
+			res.json({'msg':'查询失败'});
+		})
+	}
+
+	commentController(req,res){
+		let commentsql = SQL.findOneForComment(req.query);
+		service.query(commentsql)
+		.then(function(result){
+			result.forEach(function(v){
+				v.commentTime= moment(v.commentTime).format('YYYY-MM-DD-HH:mm:ss');
+			});
 			res.send(result);
 		})
 		.catch(function(err){

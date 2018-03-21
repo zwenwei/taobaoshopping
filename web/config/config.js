@@ -45,6 +45,13 @@ app.config(["$provide", "$compileProvider", "$controllerProvider", "$filterProvi
 		 				'/templates/details/detailsController.js',
 		 				'/templates/details/details.css'
 		 			]
+		 		},
+		 		{
+		 			name: 'comment',
+		 			files: [
+		 				'/templates/comment/commentController.js',
+		 				'/templates/comment/comment.css'
+		 			]
 		 		}
 	 		]
  		});

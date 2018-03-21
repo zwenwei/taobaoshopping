@@ -3,5 +3,8 @@ angular.module('app')
 		$rootScope.goPage=function(stateName,params){
 			console.log('params==>',params);
 			$state.go(stateName,params);
-		}
+		};
+		$rootScope.goBack=function(){
+			history.go(-1);
+		};
 	}])
