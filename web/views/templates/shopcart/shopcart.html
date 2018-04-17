@@ -1,0 +1,19 @@
+<ion-header-bar class="bar-assertive">
+	<span class="title">购物车</span>	
+</ion-header-bar>
+<ion-content class="shopcart">
+	<ion-list>
+		<ion-item class="item-thumbnail-left" ng-repeat="item in data" ng-click="goPage('settle',{id:item.cartid})">
+			<img ng-src="{{item.imgUrl}}" />
+			<h2>{{item.pname}}</h2>
+			<p class="padding-top">
+				<span class="padding-right">单价{{item.price}}</span>
+				<span class="padding-right">数量{{item.count}}</span>
+			</p>
+			<p class="padding-top">
+				<span class=" total">总金额{{item.price*item.count}}</span>
+				<span>{{item.cartTime}}</span>
+			</p>
+		</ion-item>
+	</ion-list>
+</ion-content>

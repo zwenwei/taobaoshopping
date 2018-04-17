@@ -14,13 +14,24 @@ angular.module('app')
 				controller:'homeController',
 				resolve:{
 					des:['$ocLazyLoad',function($ocLazyLoad){
-						return $ocLazyLoad.load('home');
+						return $ocLazyLoad.load('main.home');
 					}]	
 				}
 			})
 			.state('main.find',{
 				url:'/main/find',
 				templateUrl:'/templates/find/find.html'
+			})
+			.state('main.shopcart',{
+				url:'/main/shopcart',
+				templateUrl:'/templates/shopcart/shopcart.html',
+				cache:false,
+				controller:'shopcartController',
+				resolve:{
+					des:['$ocLazyLoad',function($ocLazyLoad){
+						return $ocLazyLoad.load('main.shopcart');
+					}]	
+				}
 			})
 			.state('register',{
 				url:'/register',
@@ -63,6 +74,17 @@ angular.module('app')
 				resolve:{
 					des:['$ocLazyLoad',function($ocLazyLoad){
 						return $ocLazyLoad.load('comment');
+					}]		
+				}
+			})
+			.state('settle',{
+				url:'/settle/:id',
+				templateUrl:'/templates/settle/settle.html',
+				cache:false,
+				controller:'settleController',
+				resolve:{
+					des:['$ocLazyLoad',function($ocLazyLoad){
+						return $ocLazyLoad.load('settle');
 					}]		
 				}
 			})

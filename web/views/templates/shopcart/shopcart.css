@@ -1,0 +1,7 @@
+.shopcart{
+	background-color: #efefef;
+}
+.shopcart .total{
+	float: right;
+	color: red;
+}

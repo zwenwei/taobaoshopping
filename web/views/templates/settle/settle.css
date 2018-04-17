@@ -1,0 +1,15 @@
+
+.settle .address{
+	overflow: hidden;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+}
+.settle .address .fl{
+	float: left;
+}
+.settle .address .fr{
+	float: right;
+}
+.settle .address .ad{
+    clear: both;
+}

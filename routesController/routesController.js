@@ -106,5 +106,30 @@ class RoutesController{
 			res.json({'msg':'查询失败'});
 		})
 	}
+	shopcartController(req,res){
+		let shopcartsql = SQL.findAllForShopcart(req.query);
+		service.query(shopcartsql)
+		.then(function(result){
+			result.forEach(function(v){
+				v.cartTime= moment(v.cartTime).format('YYYY-MM-DD-HH:mm:ss');
+			})
+			res.send(result);
+		})
+		.catch(function(err){
+			res.json({'msg':'查询失败'});
+		})
+	}
+	addShopcartController(req,res){
+	let addshopcartsql = SQL.insertOneForShopcart(req.query);
+	service.query(addshopcartsql)
+	 .then(function(result){
+	 	console.log('result==>',result);
+	 	res.json({code:200});
+	 })
+	 .catch(function(err){
+	 	console.log('err==>',err);
+	 	res.send(err);
+	 })
+	}
 }
 module.exports = new RoutesController();

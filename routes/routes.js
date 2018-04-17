@@ -13,4 +13,8 @@ module.exports = function(app){
 
 	app.get('/comment/:id',RoutesController.commentController);
 
+	app.get('/main/shopcart/:id',RoutesController.shopcartController);
+
+	app.put('/shopCart/:id',RoutesController.addShopcartController);
+
 };
